@@ -1,7 +1,5 @@
 import 'dart:ui';
 
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class CreditCardSample extends StatefulWidget {
@@ -235,7 +233,7 @@ class __PageContentState extends State<_PageContent> {
                 setState(() {
                   _useDark = !_useDark;
 
-                  NeumorphicTheme.of(context).themeMode =
+                  NeumorphicTheme.of(context)!.themeMode =
                       _useDark ? ThemeMode.dark : ThemeMode.light;
                 });
               },
@@ -326,9 +324,9 @@ class __PageContentState extends State<_PageContent> {
           child: NeumorphicRadio(
             groupValue: _dotIndex,
             value: 0,
-            onChanged: (value) {
+            onChanged: (int? value) {
               setState(() {
-                _dotIndex = value;
+                _dotIndex = value!;
               });
             },
             style: NeumorphicRadioStyle(
@@ -346,9 +344,9 @@ class __PageContentState extends State<_PageContent> {
           child: NeumorphicRadio(
             groupValue: _dotIndex,
             value: 1,
-            onChanged: (value) {
+            onChanged: (int? value) {
               setState(() {
-                _dotIndex = value;
+                _dotIndex = value!;
               });
             },
             style: NeumorphicRadioStyle(
@@ -366,9 +364,9 @@ class __PageContentState extends State<_PageContent> {
           child: NeumorphicRadio(
             groupValue: _dotIndex,
             value: 2,
-            onChanged: (value) {
+            onChanged: (int? value) {
               setState(() {
-                _dotIndex = value;
+                _dotIndex = value!;
               });
             },
             style: NeumorphicRadioStyle(
